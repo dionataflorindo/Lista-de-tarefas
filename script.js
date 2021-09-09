@@ -8,19 +8,14 @@ function criaLi() {
 }
 
 inputTarefa.addEventListener('keypress', function(e) {
-  // @ts-ignore
   if (e.keyCode === 13) {
-    // @ts-ignore
     if (!inputTarefa.value) return;
-    // @ts-ignore
     criaTarefa(inputTarefa.value);
   }
 });
 
 function limpaInput() {
-  // @ts-ignore
   inputTarefa.value = '';
-  // @ts-ignore
   inputTarefa.focus();
 }
 
@@ -44,18 +39,14 @@ function criaTarefa(textoInput) {
 }
 
 btnTarefa.addEventListener('click', function() {
-  // @ts-ignore
   if (!inputTarefa.value) return;
-  // @ts-ignore
   criaTarefa(inputTarefa.value);
 });
 
 document.addEventListener('click', function(e) {
   const el = e.target;
 
-  // @ts-ignore
   if (el.classList.contains('apagar')) {
-    // @ts-ignore
     el.parentElement.remove();
     salvarTarefas();
   }
